@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>       ClimaSphere         </h1>
+    <p>Your Real-Time Global Weather Companion</p>
+  </header>
+  
+  <div class="overlay">
+    <div class="input-container">
+      <input type="text" id="city-input" list="cities" placeholder="Enter City Name" />
+<datalist id="cities"></datalist>
+
+      <button id="get-weather-btn">Get Weather</button>
+    </div>
+
+    <ul id="city-suggestions" style="position:absolute; background:#fff; border:1px solid #ccc; list-style:none; margin:0; padding:0; width:200px; display:none; z-index:1000;"></ul>
+
+    <div id="weather-info" class="hidden">
+      <h2 id="city-name"></h2>
+<p id="date" style="text-align: center;"></p>
+
+
+
+      <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+      <p><strong>Weather:</strong> <span id="description"></span></p>
+      <p><strong>Country:</strong> <span id="Country"></span></p>
+      <p><strong>Wind Speed:</strong> <span id="ene"></span></p>
+      <p><strong>Humidity:</strong> <span id="hum"></span></p>
+      <p><strong>UV Index:</strong> <span id="UV"></span></p>
+      <p><strong>Visibility:</strong> <span id="vis"></span></p>
+      <p><strong>Pressure:</strong> <span id="pres"></span></p>
+      <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+      <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+      <p><strong>Max Temperature:</strong> <span id="maxtemp"></span></p>
+      <p><strong>Min Temperature:</strong> <span id="mintemp"></span></p>
+      <p><strong>Ground Level:</strong> <span id="grndl"></span></p>
+      <p><strong>Sea Level:</strong> <span id="seal"></span></p>
+      
+    </div>
+
+    <p id="error-message" class="hidden">City not found. Please try another city.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
